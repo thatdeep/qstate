@@ -114,9 +114,9 @@ def bloch_to_state(point):
 
     # find eigenvector corresponding to eigenvalue 1:
     #
-    A_minus_I = A - np.eye(2)
+    mp_minus_I = mp - np.eye(2)
     # Find a non-trivial solution to the homogeneous system
-    _, _, Vt = np.linalg.svd(A_minus_I)
+    _, _, Vt = np.linalg.svd(mp_minus_I)
     eigenvector = Vt[-1]
 
     # Normalize the eigenvector if needed, that will be our state corresponding to a point on a sphere
